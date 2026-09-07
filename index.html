@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#eeeae2" />
+  <meta name="description" content="Mon bureau en 3D, à explorer du bout des doigts." />
+  <title>Mon Bureau</title>
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="./style.css" />
+  <script type="module" src="./dist/main.js"></script>
+</head>
+
+<body>
+  <header class="toolbar">
+    <h1></span>Mon Bureau</h1>
+    <div class="actions" aria-label="Affichage de la scène">
+      <button id="reset" type="button" disabled>Vue initiale</button>
+    </div>
+  </header>
+  <main id="viewer" aria-label="Mon Bureau en trois dimensions">
+    <canvas id="scene" tabindex="0"
+      aria-label="Vue 3D du bureau. Glissez pour tourner et utilisez la molette pour zoomer."></canvas>
+    <p id="status" role="status">Chargement du bureau…</p>
+    <noscript>Activez JavaScript pour explorer le bureau en 3D.</noscript>
+  </main>
+  <footer>Glisser pour tourner <span aria-hidden="true">·</span> Molette ou pincement pour zoomer</footer>
+</body>
+
+</html>

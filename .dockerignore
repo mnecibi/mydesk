@@ -1,0 +1,11 @@
+# Send only the web sources and exported assets to the Docker build.
+**
+!Dockerfile
+!nginx.conf
+!package.json
+!package-lock.json
+!main.js
+!index.html
+!style.css
+!assets/
+!assets/**

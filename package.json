@@ -1,0 +1,26 @@
+{
+  "name": "bureau-miniature",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild main.js --bundle --format=esm --target=es2022 --minify --outfile=dist/main.js",
+    "watch": "esbuild main.js --bundle --format=esm --target=es2022 --sourcemap --outfile=dist/main.js --watch",
+    "serve": "live-server --host=127.0.0.1 --port=5500 --no-browser --watch=index.html,style.css,dist,assets",
+    "dev": "npm run build && concurrently --kill-others --names esbuild,server \"npm:watch\" \"npm:serve\"",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "three": "^0.185.1"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5",
+    "esbuild": "^0.28.2",
+    "live-server": "^1.2.2"
+  },
+  "overrides": {
+    "live-server": {
+      "chokidar": "^3.6.0"
+    }
+  }
+}
