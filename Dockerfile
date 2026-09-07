@@ -18,7 +18,7 @@ FROM nginx:1.30-alpine
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 WORKDIR /usr/share/nginx/html
-COPY index.html style.css mydesk.png ./
+COPY index.html style.css myoffice.png ./
 COPY assets ./assets
 COPY --from=build /app/dist ./dist
 

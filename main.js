@@ -33,7 +33,7 @@ async function start() {
   fill.position.set(4, 5, -1);
   scene.add(fill);
 
-  const gltf = await new GLTFLoader().loadAsync('./assets/bureau.glb');
+  const gltf = await new GLTFLoader().loadAsync('./assets/myoffice.glb');
   const model = gltf.scene;
   model.traverse((object) => {
     if (object.isMesh) {
@@ -107,5 +107,5 @@ async function start() {
 start().catch((error) => {
   console.error('Unable to load the scene:', error);
   status.hidden = false;
-  status.textContent = 'My desk could not be loaded. Reload the page to try again.';
+  status.textContent = 'My Office could not be loaded. Reload the page to try again.';
 });

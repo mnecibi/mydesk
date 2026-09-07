@@ -1,6 +1,6 @@
 """Export the saved Blender scene to a compact, self-contained web asset.
 
-Run with: Blender --background bureau_minimaliste.blend --python export_web.py
+Run with: Blender --background myoffice.blend --python export_web.py
 The source .blend is never overwritten.
 """
 import bpy
@@ -41,7 +41,7 @@ for obj in export_objects:
 if camera:
     camera.select_set(True)
 
-path = os.path.join(ROOT, 'assets', 'bureau.glb')
+path = os.path.join(ROOT, 'assets', 'myoffice.glb')
 bpy.ops.export_scene.gltf(
     filepath=path,
     export_format='GLB',
