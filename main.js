@@ -105,7 +105,7 @@ async function start() {
 }
 
 start().catch((error) => {
-  console.error('Impossible de charger la scène :', error);
+  console.error('Unable to load the scene:', error);
   status.hidden = false;
-  status.textContent = 'Le bureau n’a pas pu être chargé. Rechargez la page pour réessayer.';
+  status.textContent = 'My desk could not be loaded. Reload the page to try again.';
 });
